@@ -1,0 +1,80 @@
+/* BEGIN GLOBAL ARCHNAVBAR */
+@import "settings";
+
+#archnavbar, #archnavbar * {
+    line-height: 1;
+    font-family: $font_0;
+    margin: 0;
+    padding: 0;
+    float: none;
+    clear: none;
+    border: 0 none;
+    width: auto;
+    height: auto;
+}
+
+#archnavbar {
+    min-height: 40px;
+    padding: 10px 15px;
+    background: $color_mine_shaft_approx;
+    border-bottom: 5px $color_lochmara_approx solid;
+    text-align: right;
+    font-size: 40px;
+    &.anb-home ul li#anb-home a {
+        color: $white;
+    }
+    &.anb-packages ul li#anb-packages a {
+        color: $white;
+    }
+    &.anb-download ul li#anb-download a {
+        color: $white;
+    }
+}
+
+#archnavbarlogo {
+    float: left;
+    background: $url_0 no-repeat;
+    a {
+        display: block;
+        height: 40px;
+        width: 190px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-indent: 200%;
+    }
+}
+
+#archnavbarlist {
+    display: inline-block; /* prevent breaking around logo */
+    list-style: none;
+    font-family: $font_0;
+    li {
+        vertical-align: middle;
+        font-size: 14px;
+        text-align: center;
+        display: inline-block;
+        padding: 0 10px; /* + inline-block whitespace margin */
+        font-weight: bold;
+        color: $color_mountain_mist_approx;
+        a {
+            color: $color_mountain_mist_approx;
+            display: block;
+            text-decoration: none;
+            &:hover {
+                color: $white;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+/* Center menu on smaller screens */
+@media not all and (min-width: 50em) {
+    #archnavbar {
+        text-align: center;
+    }
+}
+
+/* END GLOBAL ARCHNAVBAR */
+
+/* vim: set ai ts=4 sw=4 et: */
